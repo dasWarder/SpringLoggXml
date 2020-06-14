@@ -1,6 +1,8 @@
 package other;
 
 import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.Random;
 
@@ -10,6 +12,15 @@ public class Event {
     private String msg;
     private Date date;
     private DateFormat df;
+
+    public static boolean isDay() {
+        LocalTime localTime = LocalTime.now();
+        int hour = localTime.getHour();
+        if (hour > 8 && hour < 17) {
+            return true;
+        }
+        return false;
+    }
 
     public Event(Date date, DateFormat df) {
         this.date = date;

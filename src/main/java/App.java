@@ -50,9 +50,9 @@ public class App {
         Event event5 = apc.getBean("event", Event.class);
         event5.setMsg("Check message for bean5");
 
-        app.logMessage(EventType.INFO, event);
+//        app.logMessage(EventType.INFO, event);
         app.logMessage(null, event2);
-        app.logMessage(EventType.ERROR, event3);
+//        app.logMessage(EventType.ERROR, event3);
 //        app.logMessage(event4);
 //        app.logMessage(event5);
 

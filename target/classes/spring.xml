@@ -32,7 +32,8 @@
 
     <bean id="app" class="App">
         <constructor-arg ref="client"/>
-        <constructor-arg ref="cashFileLogger"/>
+        <constructor-arg ref="#{T(other.Event).isDay() ? 'fileLogger' :
+         'consoleLogger' }"/>
         <constructor-arg ref="loggerMap"/>
     </bean>
 
